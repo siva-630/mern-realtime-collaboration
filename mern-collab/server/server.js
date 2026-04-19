@@ -10,13 +10,20 @@ const mongo= process.env.MONGO_URI;
 
 const app = express();
 
+
+
+app.use(cors({
+    origin: "http://localhost:5173"
+  }));
+
 app.get("/",(req, res) => {
     res.send("server running")
 })
 
+
 mongoose.connect(mongo)
     .then(() => console.log("mongodb connected"))
-    .catch(() => console.log(error));
+    .catch((error) => console.log(error));
 
 
 app.listen(PORT, () => {
