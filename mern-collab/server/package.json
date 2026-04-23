@@ -2,9 +2,9 @@
   "name": "mern-realtime-collaboration-server",
   "version": "1.0.0",
   "description": "Backend for real-time collaboration platform using MERN stack",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "server": "nodemon server.js"
   },
   "keywords": [
